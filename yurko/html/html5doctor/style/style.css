@@ -1,11 +1,15 @@
 div {
-    width: 70px; height: 70px;
+    width: 102%;
+    height: 200px;
     display: inline-block;
-    margin-right: 5px;
+    margin-top: -8px;
+    margin-left: -8px;
+
+
 }
 
 div:hover.b { background: blue; }
 div:hover.r { background: yellow; }
-.b { background: black; }
+.header { background: #0063A6; }
 .r { background: #ff0000; }
 
