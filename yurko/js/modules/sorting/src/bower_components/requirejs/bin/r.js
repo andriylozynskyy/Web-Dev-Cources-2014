@@ -2871,7 +2871,7 @@ define('lang', function () {
 /*global setImmediate, process, setTimeout, define, module */
 
 //Set prime.hideResolutionConflict = true to allow "resolution-races"
-//in promise-tests to pass.
+//in promises-tests to pass.
 //Since the goal of prim is to be a small impl for trusted code, it is
 //more important to normally throw in this case so that we can find
 //logic errors quicker.
