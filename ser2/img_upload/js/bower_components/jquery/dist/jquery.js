@@ -3262,8 +3262,8 @@ jQuery.extend({
 						fns = null;
 					}).promise();
 				},
-				// Get a promise for this deferred
-				// If obj is provided, the promise aspect is added to the object
+				// Get a promises for this deferred
+				// If obj is provided, the promises aspect is added to the object
 				promise: function( obj ) {
 					return obj != null ? jQuery.extend( obj, promise ) : promise;
 				}
@@ -3278,7 +3278,7 @@ jQuery.extend({
 			var list = tuple[ 2 ],
 				stateString = tuple[ 3 ];
 
-			// promise[ done | fail | progress ] = list.add
+			// promises[ done | fail | progress ] = list.add
 			promise[ tuple[1] ] = list.add;
 
 			// Handle state
@@ -3299,7 +3299,7 @@ jQuery.extend({
 			deferred[ tuple[0] + "With" ] = list.fireWith;
 		});
 
-		// Make the deferred a promise
+		// Make the deferred a promises
 		promise.promise( deferred );
 
 		// Call given func if any
@@ -3975,7 +3975,7 @@ jQuery.fn.extend({
 	clearQueue: function( type ) {
 		return this.queue( type || "fx", [] );
 	},
-	// Get a promise resolved when queues of a certain type
+	// Get a promises resolved when queues of a certain type
 	// are emptied (fx is the type by default)
 	promise: function( type, obj ) {
 		var tmp,
