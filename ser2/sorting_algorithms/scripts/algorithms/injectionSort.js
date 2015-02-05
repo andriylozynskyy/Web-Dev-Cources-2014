@@ -22,3 +22,4 @@ function injectionSort(arr) {
     return newArr;
 }
 
+exports.injectionSort = injectionSort;

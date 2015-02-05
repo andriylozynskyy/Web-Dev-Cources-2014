@@ -39,4 +39,4 @@ function mergeSort(arr) {
     console.log('MergeSort output: ' + result);  // show result
 }
 
-
+exports.mergeSort = mergeSort;
