@@ -3,6 +3,9 @@
  * @param arr {Array}
  * @returns {Array}
  */
+
+var swap = require('../helpers/helpers').swap;
+
 function selectionSort(arr) {
     var newArr = arr.slice(),  // create copy of input array
         min;
@@ -22,3 +25,4 @@ function selectionSort(arr) {
     return newArr;
 }
 
+exports.selectionSort = selectionSort;
