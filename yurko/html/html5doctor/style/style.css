@@ -1,26 +1,32 @@
-div {
-    width: 100%;
-    height: 200px;
-    display: inline-block;
+.menu {
+        display: inline-block;
 }
 body {
     margin: 0;
 }
 
-div:hover.b { background: blue; }
-div:hover.r { background: yellow; }
-.header { background: #0063A6; }
-.r { background: #ff0000; }
+.header {
+        background: #0063A6;
+        width: 100%;
+        height: 200px;
+}
 
-ul.horizontal {
+
+
+.horizontal {
     margin: 0;
     padding: 4px;
 }
-ul.horizontal li {
+.horizontal li {
     display: inline;
     margin-right: 5px;
     padding: 3px;
     float: right;
     color: white;
     border-right: 1px solid #ffffff;
+}
+
+.maincolumn{
+    width: 80%;
+    padding-left: 10%;
 }
