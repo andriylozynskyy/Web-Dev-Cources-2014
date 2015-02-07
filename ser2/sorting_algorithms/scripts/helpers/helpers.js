@@ -33,3 +33,6 @@ function swap(inputArray, firstElementIndex, secondElementIndex) {
 
     return inputArray;
 }
+
+exports.generateRandomArray = generateRandomArray;
+exports.swap = swap;

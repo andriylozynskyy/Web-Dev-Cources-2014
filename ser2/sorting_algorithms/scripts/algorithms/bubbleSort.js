@@ -3,6 +3,9 @@
  * @param arr {Array}
  * @returns {Array}
  */
+
+var swap = require('../helpers/helpers').swap;
+
 function bubbleSort(arr) {
     var newArr = arr.slice();  // create copy of input array
 
@@ -21,4 +24,4 @@ function bubbleSort(arr) {
     return newArr;
 }
 
-
+exports.bubbleSort = bubbleSort;
