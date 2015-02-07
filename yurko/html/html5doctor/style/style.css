@@ -1,6 +1,9 @@
 .menu {
-        display: inline-block;
+        display: inline;
+        margin-right: 5px;
+        padding: 3px;
 }
+
 body {
     margin: 0;
 }
@@ -22,7 +25,7 @@ body {
     margin-right: 5px;
     padding: 3px;
     float: right;
-    color: white;
+    color: yellow;
     border-right: 1px solid #ffffff;
 }
 
