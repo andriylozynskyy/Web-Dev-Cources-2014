@@ -1,4 +1,4 @@
-define("sortQuick", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
     function sortQuick(data) {
         if (data.length < 2) {

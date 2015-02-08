@@ -1,4 +1,4 @@
-define("sortInsertion", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
 
     /**

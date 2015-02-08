@@ -1,7 +1,7 @@
 define('Util', function(){
-    var Util = function() {
+    return {
 
-        this.httpCall = function(method, url, data, onReady){
+        httpCall : function(method, url, data, onReady){
             var httpRequest = new XMLHttpRequest(),
                 params = '',
                 paramCounter = 0,
@@ -45,11 +45,11 @@ define('Util', function(){
                 console.log("Connect to " + url + " timed out.");
                 return false;
             };
-        };
+        },
 
 
 
-        this.sortArrOfObjectsByParam = function(arrToSort /* array */, strObjParamToSortBy /* string */, sortAscending /* bool(optional, defaults to true) */) {
+        sortArrOfObjectsByParam : function(arrToSort /* array */, strObjParamToSortBy /* string */, sortAscending /* bool(optional, defaults to true) */) {
             if (sortAscending == undefined) sortAscending = true;  // default to true
 
             if (sortAscending) {
@@ -62,19 +62,18 @@ define('Util', function(){
                     return a[strObjParamToSortBy] < b[strObjParamToSortBy];
                 });
             }
-        };
+        },
 
 
-        this.toggleSortOrder = function (isSortAsc) {
+        toggleSortOrder : function (isSortAsc) {
             return !isSortAsc;
-        };
+        },
 
-        this.emptyContainer = function (containerElementId) {
+        emptyContainer : function (containerElementId) {
             var containerElement = document.getElementById(containerElementId);
             while (containerElement.firstChild) {
                 containerElement.removeChild(containerElement.firstChild);
             }
         }
     };
-    return Util;
 });

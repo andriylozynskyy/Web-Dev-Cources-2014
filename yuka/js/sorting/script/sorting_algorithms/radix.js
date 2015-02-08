@@ -1,4 +1,4 @@
-define("sortRadix", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
 
     function sortRadix (data, radix) {

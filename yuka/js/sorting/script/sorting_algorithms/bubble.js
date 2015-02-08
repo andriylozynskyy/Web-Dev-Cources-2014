@@ -1,4 +1,4 @@
-define("sortBubble", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
 
     function sortBubble(data) {
@@ -13,5 +13,6 @@ define("sortBubble", ["helpers"], function(helpers) {
         }
         return newArray;
     }
+
     return sortBubble;
 });

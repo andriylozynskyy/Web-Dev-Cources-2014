@@ -1,4 +1,4 @@
-define("sortQuickRandom", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
 
         function sortQuickRandom(data) {

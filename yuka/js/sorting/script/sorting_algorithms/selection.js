@@ -1,4 +1,4 @@
-define("sortSelection", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
 
     function sortSelection(data) {

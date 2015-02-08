@@ -7,9 +7,7 @@ define([], function () {
         return modifyingArray;
     }
 
-
-
-// Random array generating
+    // Random array generating
     function generateRandomArray(arraysize){
         var randomlyGeneratedArray= [];
 
@@ -24,7 +22,6 @@ define([], function () {
         var copiedArray=arrayToClone.slice(0);
         return copiedArray;
     }
-
 
     Array.prototype.clone = function() {
         return this.slice(0);

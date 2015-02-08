@@ -1,4 +1,4 @@
-define("sortMerge", ["helpers"], function(helpers) {
+define(["helpers"], function(helpers) {
     "use strict";
     function sortMerge(data) {
         if (data.length < 2) {
