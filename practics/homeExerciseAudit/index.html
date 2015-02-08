@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "PT Sans";
+            color: #333;
+        }
+        .task {
+            margin: 3px;
+        }
+        .tag {
+            background: #00b6e3;
+            padding: 0 5px;
+            border-radius: 3px;
+
+        }
+    </style>
+</head>
+<body>
+<script>
+    //TODO: make it like TODO list with credential access (github). And ability to bind to CI and git pull requests.
+    //TODO: Will be grate to add ability to manage and asign tasks using github issues.
+    function TaskList (elContainer) {
+        var dataProgres = JSON.parse(localStorage.getItem("dataProgres")) || {
+            tasks: [
+                { title: "Сортування. (всі методи)", type: "programming"},
+                { title: "Візуалізація сортування (персональне завдання)", type: "programming"},
+                { title: "Календарик. (з локалізаціями)", type: "programming"},
+                { title: "GOL", type: "programming"},
+                { title: "Бінарне дерево пошуку. (+ Збалансоване бінарне дерево пошуку)", type: "programming"},
+                { title: "Дропзоне. (Завантажувати на дропбокс)", type: "programming"},
+                { title: "Табличка з користувачами. (Сортування по колонках)", type: "programming"},
+                { title: "Програмка обліку домашніх робіт.", type: "programming"},
+                { title: "Handlebars", type: "programming"},
+                { title: "Модульні системи. CommonJS, AMD.", type: "programming"},
+                { title: "Promises", type: "programming"},
+                { title: "HTML 5 doctor", type: "HTML codding"},
+                { title: "Personal task", type: "HTML codding"},
+                { title: "Fonts", type: "HTML codding"},
+                { title: "Grid Systems", type: "HTML codding"},
+                { title: "Media Query", type: "HTML codding"},
+                { title: "Sass", type: "HTML codding"},
+                { title: "BEM", type: "HTML codding"},
+                { title: "UI Kit https://www.behance.net/gallery/21169935/55-Elements-FREE-UI-KIT-Clean-white-DOWNLOAD", type: "HTML codding"},
+                { title: "SVG", type: "HTML codding"},
+                { title: "Animation", type: "HTML codding"},
+                { title: "Gulp", type: "HTML codding"}
+            ]
+        };
+
+        this.render = function (){
+            // Render list;
+            var ListHTML = dataProgres.tasks.map((task) => {
+                return `
+                    <li class="task">
+                        <span class="tag">${task.type}</span>
+                        ${task.title}
+                    </li>
+                `;
+            });
+            var HTML = `<ol>${ListHTML.join("")}</ol>`;
+            elContainer.innerHTML = HTML;
+        };
+
+        var init = function (){
+            this.render();
+        }.bind(this);
+
+        init();
+    };
+
+    new TaskList(document.body);
+
+</script>
+</body>
+</html>

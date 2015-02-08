@@ -50,7 +50,7 @@ BinaryTree.prototype.add = function (value) {
                 subtree.left.x = subtree.x - c;
                 subtree.left.y = subtree.y + heightBetweenElements;
             } else {
-                treeWalk(value, subtree.left)
+                treeWalk(value, subtree.left);
             }
 
         } else {
@@ -132,11 +132,14 @@ BinaryTree.prototype.remove = function (value) {
     var parentSubtree = searchResult[1];
     var pointer = searchResult[2];
     var successor;
-//binary tree removing algorithms
-//if subtree without children then it will be removed
-//if subtree with one child then it will be replaced onto child
-//if subtree with children then it will be replaced onto the last left child from
-// first right child of subtree (child with a smaller value from first right  element of subtree)
+
+    /*
+      binary tree removing algorithms
+      if subtree without children then it will be removed
+      if subtree with one child then it will be replaced onto child
+      if subtree with children then it will be replaced onto the last left child from
+      first right child of subtree (child with a smaller value from first right  element of subtree)
+     */
     if (subtree.child == 0) {
         parentSubtree[pointer] = null;
     } else if (subtree.child == 1) {

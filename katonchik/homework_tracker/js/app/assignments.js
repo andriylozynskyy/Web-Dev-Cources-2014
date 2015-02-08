@@ -2,12 +2,9 @@
  * Created by vkatolyk on 29.01.2015.
  */
 
-define(['handlebars', 'Util'], function(Handlebars, Util){
+define(['handlebars', 'Util'], function(Handlebars, util){
 
     var Assignments = function(containerElement, category) {
-
-        var util = new Util();
-
         this.getAssignments = function(category){
             var params={};
             if(category){

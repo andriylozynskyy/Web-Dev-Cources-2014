@@ -1,8 +1,12 @@
 var require = {
     baseURL: 'js',
+    shim : {
+        "_" : "underscore.js"
+    },
+
     paths: {
         lib: 'js/lib',
-        bower: 'js/bower_components',
-        jquery: 'js/bower_components/jquery/dist/jquery.js'
+        libraries : 'bower_components',
+        jquery: '/jquery/dist/jquery'
     }
 }

@@ -17,5 +17,6 @@ define(["helpers"], function(helpers) {
         }
         return newArray;
     }
+
     return sortBubble;
 });
