@@ -8,6 +8,15 @@
             font-family: "PT Sans";
             color: #333;
         }
+        .task {
+            margin: 3px;
+        }
+        .tag {
+            background: #00b6e3;
+            padding: 0 5px;
+            border-radius: 3px;
+
+        }
     </style>
 </head>
 <body>
@@ -45,14 +54,19 @@
         this.render = function (){
             // Render list;
             var ListHTML = dataProgres.tasks.map((task) => {
-                return `<li>${task.title}</li>`;
+                return `
+                    <li class="task">
+                        <span class="tag">${task.type}</span>
+                        ${task.title}
+                    </li>
+                `;
             });
             var HTML = `<ol>${ListHTML.join("")}</ol>`;
             elContainer.innerHTML = HTML;
         };
 
         var init = function (){
-            this.render()
+            this.render();
         }.bind(this);
 
         init();
