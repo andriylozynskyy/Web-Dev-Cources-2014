@@ -1,6 +1,10 @@
 define(["helpers"], function(helpers) {
     "use strict";
 
+    /**
+     * @param data {Array}
+     * @return result {Array} new sorted array
+     */
     function sortSelection(data) {
         var newArray = data.slice(); //cloning array
 
@@ -11,10 +15,14 @@ define(["helpers"], function(helpers) {
                 if (newArray[j] < newArray[min]) {
                     min = j;
                 }
-                helpers.swap(newArray, min, i);
+
+                if (min !== i) {
+                    helpers.swap(newArray, min, i);
+                }
             }
-            return newArray;
         }
+
+        return newArray;
     }
     return sortSelection;
 });

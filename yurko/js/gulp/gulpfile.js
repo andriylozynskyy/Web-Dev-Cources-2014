@@ -25,8 +25,9 @@ gulp.task('sass', function () {
 
 gulp.task('requirejsBuild', function() {
     rjs({
-        baseUrl: './src/scripts/**/*.js',
+        baseUrl: './src/scripts/script.js',
         out: 'all-min.js'
     })
+
         .pipe(gulp.dest('./dist/scripts')); // pipe it to the output DIR
 });
