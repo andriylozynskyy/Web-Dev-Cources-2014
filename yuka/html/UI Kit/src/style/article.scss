@@ -1,5 +1,5 @@
-.post { width: 400px;  height: 800px; background: #ffffff; float: left; text-align: center; margin: 20px;
-  &__wrap { margin: 85px; }
+.post { width: 350px; height: 700px; background: #ffffff; float: left; text-align: center; margin: 20px;
+  &__wrap { margin: 65px; }
   &__time { color: #aea276; letter-spacing: 5px; font-size: 30px; margin: 10px; font-style: italic; font-weight: 300; }
   &__more { padding: 10px; color: #aea276; border: none; background: inherit; font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
     &--border { @extend .post__more; border: 1px solid #aea276; }

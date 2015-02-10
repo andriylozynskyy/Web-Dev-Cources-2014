@@ -42,14 +42,14 @@
     font-size: 16px; }
 
 .post {
-  width: 400px;
-  height: 800px;
+  width: 350px;
+  height: 700px;
   background: #ffffff;
   float: left;
   text-align: center;
   margin: 20px; }
   .post__wrap {
-    margin: 85px; }
+    margin: 65px; }
   .post__time {
     color: #aea276;
     letter-spacing: 5px;
