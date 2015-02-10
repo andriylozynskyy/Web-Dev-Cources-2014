@@ -1,0 +1,23 @@
+.palette__color {
+  height: 5px;
+  width: 30px;
+  margin-right: 1px;
+  float: left; }
+  .palette__color--bg_1 {
+    background: #27282d; }
+  .palette__color--bg_2 {
+    background: #464d4b; }
+  .palette__color--bg_3 {
+    background: #435555; }
+  .palette__color--bg_4 {
+    background: #869898; }
+  .palette__color--bg_5 {
+    background: #aea276; }
+  .palette__color--bg_6 {
+    background: #a8cccc; }
+  .palette__color--bg_7 {
+    background: #818181; }
+  .palette__color--bg_8 {
+    background: #ededed; }
+
+/*# sourceMappingURL=palette.css.map */
