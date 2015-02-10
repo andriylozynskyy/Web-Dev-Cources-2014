@@ -1,4 +1,4 @@
-define(["data", "sorting_algorithms/bubble", "sorting_algorithms/count", "sorting_algorithms/insertion", "sorting_algorithms/merge", "sorting_algorithms/quick", "sorting_algorithms/quick_randomized", "sorting_algorithms/radix", "sorting_algorithms/selection" ],
+define(["data", "sort/bubble", "sort/count", "sort/insertion", "sort/merge", "sort/quick", "sort/quick_randomized", "sort/radix", "sort/selection" ],
     function (data, sortBubble, sortCounting, sortInsertion, sortMerge, sortQuick, sortQuickRandom, sortRadix, sortSelection){
         document.write("Input array: "               + data                  + "<br/>");
         document.write("Bubble sorted array: "       + sortBubble(data)      + "<br/>");

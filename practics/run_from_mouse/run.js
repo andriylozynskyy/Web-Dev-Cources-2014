@@ -1,6 +1,6 @@
 function Runner (runnerElement) {
     "use strict";
-    const RUN_DISTANCE = 10;
+    const RUN_DISTANCE = 100;
     var runner, mouse, distance, isRunned=false;
 
     function run (dx, dy, time) {
@@ -37,12 +37,20 @@ function Runner (runnerElement) {
                 x : runner.x - mouse.x,
                 y : runner.y - mouse.y
             };
-            distance.length  = Math.sqrt( Math.abs(distance.x)+ Math.abs(distance.y));
+            distance.length  = Math.sqrt(distance.x * distance.x + distance.y * distance.y);
+
 
             
             if ((distance.length < RUN_DISTANCE)) {
-                console.log(distance.x, distance.y);
-                run(distance.x, distance.y, 1000);
+                var dLength = RUN_DISTANCE - distance.length;
+                var signX = distance.x < 0 ? -1 : 1;
+                var signY = distance.y < 0 ? -1 : 1;
+
+                var angle = Math.atan(distance.x/distance.y);
+                var dy = Math.abs(Math.cos(angle) * dLength);
+                var dx = Math.abs(Math.sin(angle) * dLength);
+                //console.log(signX, signY, dx, dy);
+                run(dx * signX, dy * signY, 100);
             }
         }
 

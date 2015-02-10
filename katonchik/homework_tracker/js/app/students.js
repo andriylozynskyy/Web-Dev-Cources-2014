@@ -2,7 +2,7 @@
  * Created by vkatolyk on 29.01.2015.
  */
 
-define(['Util', 'Dropzone', 'handlebars'], function(Util, dropzone, Handlebars){
+define(['Util', 'Dropzone', 'handlebars'], function(util, dropzone, Handlebars){
 
     var Students = function(containerElement, category) {
         var self = this;
@@ -11,8 +11,6 @@ define(['Util', 'Dropzone', 'handlebars'], function(Util, dropzone, Handlebars){
             isSortAsc = true; //reverse is -1
 
         this.studentArray = [];
-
-        var util = new Util();
 
         function initializeHeader()
         {

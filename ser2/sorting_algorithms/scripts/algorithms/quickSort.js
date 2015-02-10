@@ -27,3 +27,5 @@ function quickSort(arr) {
     console.timeEnd('QuickSort time');  // end timer
     console.log('QuickSort output: ' + result);  // show result js_courses-sorting-algorithms
 }
+
+exports.quickSort = quickSort;

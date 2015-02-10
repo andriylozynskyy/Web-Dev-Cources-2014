@@ -15,6 +15,7 @@ gulp.task('compressjs', function() {
         .pipe(gulp.dest('./dist/scripts'))
 });
 
+
 gulp.task('sass', function () {
     gulp.src('./js/sorting/src/style/**/*.scss')
         .pipe(sass())

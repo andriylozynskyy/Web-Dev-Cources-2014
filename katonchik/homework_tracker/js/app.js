@@ -26,7 +26,9 @@ requirejs.config({
 
 require( ['app/students', 'app/assignments', 'app/students_assignments'],
   function(    Students,       Assignments,       StudentsAssignments) {
-        document.getElementById("menu").addEventListener('click', function (e) {
+    document
+        .getElementById("menu")
+        .addEventListener('click', function (e) {
             var category,
                 assignments;
             if (e.target && e.target.classList.contains("menu__item")) {
