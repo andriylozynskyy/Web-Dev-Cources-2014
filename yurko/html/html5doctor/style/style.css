@@ -32,4 +32,6 @@ body {
 .maincolumn{
     width: 80%;
     padding-left: 10%;
+    margin-top: -80px;
+
 }
