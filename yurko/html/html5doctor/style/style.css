@@ -36,8 +36,3 @@ body {
 
 }
 
-#help {
-    width: 225px; /* Ширина блока */
-    padding: 5px; /* Поля вокруг текста */
-    background: #f0f0f0; /* Цвет фона */
-}
