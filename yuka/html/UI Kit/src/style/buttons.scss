@@ -1,0 +1,11 @@
+.button         { color: white; border: none; font-size: 24px; margin: 5px;
+  &--small      { @extend.button; width: 60px; height: 60px;
+    &--bg_grey  { @extend .button--small; background: #464d4b; }
+    &--bg_brown { @extend .button--small; background: #aea276; }
+  }
+  &--big        { @extend .button; width: 100px; height: 100px;
+    &--round    { @extend .button--big; background: #818181; border-radius: 50px; }
+    &--bg_grey  { @extend .button--big; background: #464d4b; }
+    &--bg_brown { @extend .button--big; background: #aea276; }
+  }
+}

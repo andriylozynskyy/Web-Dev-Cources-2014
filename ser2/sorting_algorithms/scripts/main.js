@@ -1,8 +1,8 @@
-var bubbleSort = require('./algorithms/bubbleSort').bubbleSort;
-var injectionSort = require('./algorithms/injectionSort').injectionSort;
-var mergeSort = require('./algorithms/mergeSort').mergeSort;
-var quickSort = require('./algorithms/quickSort').quickSort;
-var selectionSort = require('./algorithms/selectionSort').selectionSort;
+var bubbleSort = require('./algorithms/bubbleSort');
+var injectionSort = require('./algorithms/injectionSort');
+var mergeSort = require('./algorithms/mergeSort');
+var quickSort = require('./algorithms/quickSort');
+var selectionSort = require('./algorithms/selectionSort');
 var generateArray = require('./helpers/helpers').generateRandomArray;
 
 var arrToSort = generateArray();

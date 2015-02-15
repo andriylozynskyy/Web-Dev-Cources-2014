@@ -1,0 +1,12 @@
+.palette    { margin: 5px;
+  &__color  { height: 10px; width: 100px; margin-right: 1px; float: left;
+    &--bg_1 { @extend .palette__color; background: #27282d; }
+    &--bg_2 { @extend .palette__color; background: #464d4b; }
+    &--bg_3 { @extend .palette__color; background: #435555; }
+    &--bg_4 { @extend .palette__color; background: #869898; }
+    &--bg_5 { @extend .palette__color; background: #aea276; }
+    &--bg_6 { @extend .palette__color; background: #a8cccc; }
+    &--bg_7 { @extend .palette__color; background: #818181; }
+    &--bg_8 { @extend .palette__color; background: #ededed; }
+  }
+}
