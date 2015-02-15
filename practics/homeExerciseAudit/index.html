@@ -20,9 +20,13 @@
     </style>
 </head>
 <body>
-<input type="text" class="filtet" placeholder="Filter"/>
+<input type="text" id="filter" class="filtet" placeholder="Filter"/>
 <div id="list"></div>
 <script>
+    document.getElementById("filter").addEventListener("keydown", function (ev){
+        console.log(this.value);
+    })
+
     //TODO: make it like TODO list with credential access (github). And ability to bind to CI and git pull requests.
     //TODO: Will be grate to add ability to manage and asign tasks using github issues.
     function TaskList (elContainer) {
