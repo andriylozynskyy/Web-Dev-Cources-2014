@@ -25,4 +25,4 @@ function selectionSort(arr) {
     return newArr;
 }
 
-exports.selectionSort = selectionSort;
+module.exports = selectionSort;

@@ -28,4 +28,4 @@ function quickSort(arr) {
     console.log('QuickSort output: ' + result);  // show result js_courses-sorting-algorithms
 }
 
-exports.quickSort = quickSort;
+module.exports = quickSort;

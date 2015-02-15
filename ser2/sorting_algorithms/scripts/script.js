@@ -25,7 +25,7 @@ function bubbleSort(arr) {
     return newArr;
 }
 
-exports.bubbleSort = bubbleSort;
+module.exports = bubbleSort;
 
 },{"../helpers/helpers":"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\helpers\\helpers.js"}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\algorithms\\injectionSort.js":[function(require,module,exports){
 /**
@@ -52,7 +52,7 @@ function injectionSort(arr) {
     return newArr;
 }
 
-exports.injectionSort = injectionSort;
+module.exports = injectionSort;
 },{}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\algorithms\\mergeSort.js":[function(require,module,exports){
 /**
  * Sorts input array using merge algorithm. Returns sorted array.
@@ -95,7 +95,7 @@ function mergeSort(arr) {
     console.log('MergeSort output: ' + result);  // show result
 }
 
-exports.mergeSort = mergeSort;
+module.exports = mergeSort;
 
 },{}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\algorithms\\quickSort.js":[function(require,module,exports){
 /**
@@ -128,7 +128,7 @@ function quickSort(arr) {
     console.log('QuickSort output: ' + result);  // show result js_courses-sorting-algorithms
 }
 
-exports.quickSort = quickSort;
+module.exports = quickSort;
 },{}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\algorithms\\selectionSort.js":[function(require,module,exports){
 /**
  * Sorts input array using selection algorithm. Returns sorted array.
@@ -157,7 +157,7 @@ function selectionSort(arr) {
     return newArr;
 }
 
-exports.selectionSort = selectionSort;
+module.exports = selectionSort;
 
 },{"../helpers/helpers":"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\helpers\\helpers.js"}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\helpers\\helpers.js":[function(require,module,exports){
 /**
@@ -199,11 +199,11 @@ function swap(inputArray, firstElementIndex, secondElementIndex) {
 exports.generateRandomArray = generateRandomArray;
 exports.swap = swap;
 },{}],"D:\\GITHUB\\Web-Dev-Cources-2014\\ser2\\sorting_algorithms\\scripts\\main.js":[function(require,module,exports){
-var bubbleSort = require('./algorithms/bubbleSort').bubbleSort;
-var injectionSort = require('./algorithms/injectionSort').injectionSort;
-var mergeSort = require('./algorithms/mergeSort').mergeSort;
-var quickSort = require('./algorithms/quickSort').quickSort;
-var selectionSort = require('./algorithms/selectionSort').selectionSort;
+var bubbleSort = require('./algorithms/bubbleSort');
+var injectionSort = require('./algorithms/injectionSort');
+var mergeSort = require('./algorithms/mergeSort');
+var quickSort = require('./algorithms/quickSort');
+var selectionSort = require('./algorithms/selectionSort');
 var generateArray = require('./helpers/helpers').generateRandomArray;
 
 var arrToSort = generateArray();
