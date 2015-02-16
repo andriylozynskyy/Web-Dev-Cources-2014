@@ -2,7 +2,7 @@
 .life__table {
   border-radius: 8px;
   padding: 5px;
-  margin: 10px auto;
+  margin: 10px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -20,16 +20,18 @@
 .life__table .life__cell.wasalive.dead {
   background-color: #b3d459; }
 
-.life__title {
+.life__title, .life__instruction {
   display: inline-block;
   color: #4d6b35;
   font: 30px 'Indie Flower', cursive;
   margin: 0; }
 .life__control {
   text-align: center; }
-  .life__control__button {
+  .life__control__button, .life__control__button--init, .life__control__button--pause {
     background: none;
     border: none;
     color: #4d6b35; }
+.life__instruction {
+  font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */

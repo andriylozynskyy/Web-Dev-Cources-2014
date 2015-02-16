@@ -1,0 +1,10 @@
+.post { width: 350px; height: 700px; background: #ffffff; float: left; text-align: center; margin: 20px;
+  &__wrap { margin: 65px; }
+  &__time { color: #aea276; letter-spacing: 5px; font-size: 30px; margin: 10px; font-style: italic; font-weight: 300; }
+  &__more { padding: 10px; color: #aea276; border: none; background: inherit; font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    &--border { @extend .post__more; border: 1px solid #aea276; }
+  }
+  &__title { text-transform: uppercase; letter-spacing: 3px; margin: 40px 0; }
+  &__poster { width: 100%; margin: 0; }
+  &__splitter { color: #aea276; }
+}

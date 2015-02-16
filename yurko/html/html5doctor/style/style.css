@@ -7,7 +7,14 @@
 body {
     margin: 0;
 }
-
+.horizontal li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+    float: right;
+    color: white;
+    border-right: 1px solid #ffffff;
+}
 .header {
         background: #0063A6;
         width: 100%;
@@ -20,14 +27,7 @@ body {
     margin: 0;
     padding: 4px;
 }
-.horizontal li {
-    display: inline;
-    margin-right: 5px;
-    padding: 3px;
-    float: right;
-    color: white;
-    border-right: 1px solid #ffffff;
-}
+
 
 .maincolumn{
     width: 80%;
@@ -36,8 +36,3 @@ body {
 
 }
 
-#help {
-    width: 225px; /* Ширина блока */
-    padding: 5px; /* Поля вокруг текста */
-    background: #f0f0f0; /* Цвет фона */
-}
