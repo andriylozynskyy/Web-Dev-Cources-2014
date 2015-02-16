@@ -2,7 +2,19 @@ var Game_Of_Life = function (container) {
     'use strict';
 
     var model, // for drawing of next step
-        drawInterval;
+        drawInterval,
+        field = document.createElement('table');
+
+    field.className = 'life__table';
+    container.appendChild(field);
+
+    field.addEventListener('click', toggleCell);
+    field.addEventListener('mousedown', function () {
+        field.addEventListener('mousemove', toggleCell);
+        field.addEventListener('mouseup', function () {
+            field.removeEventListener('mousemove', toggleCell);
+        });
+    });
 
     function initField () {
         // stop animation
@@ -11,7 +23,7 @@ var Game_Of_Life = function (container) {
             drawInterval = null;
         }
 
-        var sideLength = 25, // the field is square
+        var sideLength = 25, // the number of cells that includes a side of the square field
             field = document.getElementsByClassName('life__table')[0];
 
         field.style.height = (sideLength*20) + 'px';
@@ -27,7 +39,7 @@ var Game_Of_Life = function (container) {
             for (var j = 0; j < sideLength; j++) {
                 var cell = document.createElement('td');
                 cell.className = 'life__cell';
-                cell.id = 'cell_' + i + '_' + j;
+                cell.id = 'cell_' + i + '_' + j; // TODO: fix id to classes, 'cause can't create another life table
                 row.appendChild(cell);
                 modelRow.push(false);
             }
@@ -93,13 +105,25 @@ var Game_Of_Life = function (container) {
         drawStep();
     }
 
-    //looping the field
+    /**
+     * Looping the field
+     * @param y {Number} coordinate y
+     * @param x {Number} coordinate x
+     * @returns {*}
+     */
     function endlessModel(y, x) {
         var rx = (model[0].length + x) % model[0].length;
         var ry = (model.length + y) % model.length;
         return model[ry][rx];
     }
 
+    /**
+     * Counting a number of living neighbours
+     * @param wasAlive
+     * @param x {Number} coordinate x
+     * @param y {Number} coordinate y
+     * @returns {boolean}
+     */
     function isAlive(wasAlive, x, y) {
         var sum = 0;
         sum += endlessModel(y - 1, x - 1);
@@ -133,7 +157,7 @@ var Game_Of_Life = function (container) {
     });
 
     var playIcon = document.createElement('i');
-    playIcon.classList.add('fa', 'fa-play');
+    playIcon.classList.add('fa', 'fa-play'); // TODO: make toggle for icons play/pause
     playButton.appendChild(playIcon);
 
     var initButton = document.createElement('button');
@@ -148,22 +172,10 @@ var Game_Of_Life = function (container) {
     controls.appendChild(playButton);
     controls.appendChild(initButton);
     container.appendChild(controls);
-
-
-    var field = document.createElement('table');
-    field.className = 'life__table';
-    container.appendChild(field);
-
-    field.addEventListener('click', toggleCell);
-    field.addEventListener('mousedown', function () {
-        field.addEventListener('mousemove', toggleCell);
-        field.addEventListener('mouseup', function () {
-            field.removeEventListener('mousemove', toggleCell);
-        });
-    });
+    // end of Control Buttons
 
     initField();
 };
 
-var section = document.getElementsByClassName('life')[0],
-    myLife = new Game_Of_Life(section);
+// TODO: make figures for inputting in life table
+// TODO: write an instruction, complete the controls
