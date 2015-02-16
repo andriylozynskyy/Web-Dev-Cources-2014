@@ -8,6 +8,9 @@
 .life {
   &__title   { display: inline-block; color: #4d6b35; font: 30px 'Indie Flower', cursive; margin: 0; }
   &__control { text-align: center;
-    &__button { background: none; border: none; color: #4d6b35; }
+    &__button { background: none; border: none; color: #4d6b35;
+      &--init { @extend .life__control__button; }
+      &--pause { @extend .life__control__button; }
+    }
   }
 }

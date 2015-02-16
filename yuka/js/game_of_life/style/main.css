@@ -27,9 +27,9 @@
   margin: 0; }
 .life__control {
   text-align: center; }
-  .life__control__button {
+  .life__control__button, .life__control__button--init, .life__control__button--pause {
     background: none;
     border: none;
     color: #4d6b35; }
 
-/*# sourceMappingURL=main.scss.map */
+/*# sourceMappingURL=main.css.map */
