@@ -1,5 +1,5 @@
 var Game_Of_Life = function (container) {
-    "use strict";
+    'use strict';
 
     var model, // for drawing of next step
         drawInterval;
@@ -93,6 +93,7 @@ var Game_Of_Life = function (container) {
         drawStep();
     }
 
+    //looping the field
     function endlessModel(y, x) {
         var rx = (model[0].length + x) % model[0].length;
         var ry = (model.length + y) % model.length;
@@ -119,9 +120,10 @@ var Game_Of_Life = function (container) {
         }
     }
 
-    document.getElementsByClassName('life__control__button--init')[0].addEventListener('click', initField);
-
-    document.getElementsByClassName('life__control__button--pause')[0].addEventListener('click', function () {
+    // Control Buttons
+    var playButton = document.createElement('button');
+    playButton.className = 'life__control__button--pause';
+    playButton.addEventListener('click', function () {
         if (drawInterval) {
             clearInterval(drawInterval);
             drawInterval = null;
@@ -129,6 +131,24 @@ var Game_Of_Life = function (container) {
             drawInterval = setInterval(calculateStep, 50);
         }
     });
+
+    var playIcon = document.createElement('i');
+    playIcon.classList.add('fa', 'fa-play');
+    playButton.appendChild(playIcon);
+
+    var initButton = document.createElement('button');
+    initButton.classList.add('life__control__button--init');
+    initButton.addEventListener('click', initField);
+    var initIcon = document.createElement('i');
+    initIcon.classList.add('fa', 'fa-refresh');
+    initButton.appendChild(initIcon);
+
+    var controls = document.createElement('div');
+    controls.className = 'life__control';
+    controls.appendChild(playButton);
+    controls.appendChild(initButton);
+    container.appendChild(controls);
+
 
     var field = document.createElement('table');
     field.className = 'life__table';
