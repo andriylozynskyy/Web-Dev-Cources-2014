@@ -178,4 +178,3 @@ var Game_Of_Life = function (container) {
 };
 
 // TODO: make figures for inputting in life table
-// TODO: write an instruction, complete the controls
