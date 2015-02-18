@@ -37,4 +37,7 @@ gulp.task('watch-html-change', function(){
     gulp.watch(['./src/*.html'], ['minify-html']);
 });
 
+// default task
+gulp.task('default', ['minify-main-js', 'minify-html', 'watch-html-change']);
+
 
