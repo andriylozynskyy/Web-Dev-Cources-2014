@@ -1,0 +1,8 @@
+.additional { background: #27282d; padding: 60px; overflow: hidden;
+  &__block { width: 150px; float: left; margin: 30px;
+    &__link { color: #818181; text-decoration: none; display: block; font-style: italic; font-size: 13px; letter-spacing: 1px; }
+    &__title { color: #ffffff; font-weight: bold; text-transform: uppercase; letter-spacing: 3px; margin: 0;
+      &--splitter { color: #ffffff; margin: -5px 0 40px; }
+    }
+  }
+}
