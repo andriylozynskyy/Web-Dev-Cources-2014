@@ -1,29 +1,40 @@
 var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
     uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    minifyHTML = require('gulp-minify-html'),
     watchify = require('watchify'),
     browserify = require('browserify');
 
-var paths = {
-    mainJs: ['./src/js/main.js']
-};
+// watching js file with watchify
+var jsWatcher = watchify(browserify('./src/scripts/main.js', watchify.args));
 
-gulp.task('browserify', function() {
-    return browserify('./src/scripts/main.js')
-        .bundle()
-        // Передаем имя файла, который получим на выходе, vinyl-source-stream
-        .pipe(source('bundle.js'))
+function minifyMainScript() {
+    return jsWatcher.bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/scripts/'));
+}
+
+// minify main.js
+gulp.task('minify-main-js', minifyMainScript);
+
+// watch main.js changes
+jsWatcher.on('update', minifyMainScript);
+
+// minify html
+gulp.task('minify-html', function(){
+    return gulp.src('./src/*.html')
+        .pipe(minifyHTML())
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('minify', function () {
-    gulp.src('./src/js/main.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('dist'))
-});
-
-gulp.task('greet', function () {
-    console.log('Hello world!');
+// watch html changes
+gulp.task('watch-html-change', function(){
+    gulp.watch(['./src/*.html'], ['minify-html']);
 });
 
 
